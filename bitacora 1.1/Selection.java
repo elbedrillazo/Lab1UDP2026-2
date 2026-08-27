@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 
-/** selection adaptado para el arraylist */
+/* selection adaptado para el arraylist */
 public class Selection {
     
     private Selection() { }
