@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
-/**
- * Representa una criatura dentro de la base de datos con sus estadísticas de combate[cite: 1].
+/*
+ Representa un animal  dentro de la base de datos con sus estadísticas de combate
  */
 public class Pokemon {
     
@@ -15,15 +15,15 @@ public class Pokemon {
     private int totalStats;
 
     /**
-     * Constructor de la clase Pokemon.
-     *
-     * @param id      Identificador único[cite: 1].
-     * @param name    Nombre o código identificador[cite: 1].
-     * @param type1   Tipo primario[cite: 1].
-     * @param hp      Puntos de vida[cite: 1].
-     * @param attack  Puntos de ataque[cite: 1].
-     * @param defense Puntos de defensa[cite: 1].
-     * @param speed   Velocidad en combate[cite: 1].
+      Constructor de la clase Pokemon
+     
+      para id      Identificador único
+      para name    Nombre o código identificador
+      para type1   Tipo primario
+      para hp      Puntos de vida
+      para attack  Puntos de ataque
+      para defense Puntos de defensa
+      para speed   Velocidad en combate
      */
     public Pokemon(int id, String name, String type1, int hp, int attack, int defense, int speed) {
     }
