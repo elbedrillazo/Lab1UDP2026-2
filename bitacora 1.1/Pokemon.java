@@ -16,14 +16,7 @@ public class Pokemon {
 
     /**
       Constructor de la clase Pokemon
-     
-      para id      Identificador único
-      para name    Nombre o código identificador
-      para type1   Tipo primario
-      para hp      Puntos de vida
-      para attack  Puntos de ataque
-      para defense Puntos de defensa
-      para speed   Velocidad en combate
+      Recibe la ID, nombre, tipo principal, y las estadisticas del pokemon (vida, ataque, defensa, velocidad).
      */
     public Pokemon(int id, String name, String type1, int hp, int attack, int defense, int speed) {
     }
