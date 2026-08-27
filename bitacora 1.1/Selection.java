@@ -6,7 +6,7 @@ public class Selection {
     
     private Selection() { }
     
-    /** organiza de forma ascendente con el comparator */
+    /* organiza de forma ascendente con el comparator */
     
     public static void sort(ArrayList<Pokemon> a, Comparator<Pokemon> comparator) {
     }
