@@ -8,6 +8,7 @@ public class PokemonGenerator {
     tambien definir los n (los numeros de potencia de 2 para el trabajo, 1024 a 32768 */
     
     public static ArrayList<Pokemon> generateDatabase(int n, long seed) {
+        
         return null;
     }
 }
