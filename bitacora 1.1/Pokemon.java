@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
 /*
- Representa un animal  dentro de la base de datos con sus estadísticas de combate
+ Representa un Pokemon dentro de la base de datos con sus estadísticas de combate
  */
 public class Pokemon {
     
