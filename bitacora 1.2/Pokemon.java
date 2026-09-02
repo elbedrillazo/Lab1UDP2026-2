@@ -1,3 +1,38 @@
+/*
+import java.util.Comparator;
+public class Pokemon{
+    private int id;
+    private string nombre;
+    private string tipo;
+    private int hp;
+    private int ataque;
+    private int defensa;
+    private int velocidad;
+    private int totalStats;
+
+    public Pokemon(int id, string nombre, string tipo, int hp, int ataque, int defensa,int velocidad, int totalStats){
+        this.id = id;
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.hp= hp;
+        this.ataque= ataque;
+        this.defensa= defensa;
+        this.velocidad= velocidad;
+        this.totalStats= hp + ataque + defensa + velocidad;
+    }
+public int getId(){
+    return id;}
+public string getNombre(){
+    return nombre;}
+public string getTipo(){
+    return tipo;}
+
+public void setHp(int hp){
+    this.hp= hp; ActualizarTotalStats();}
+publuc int getHp(){
+    return hp;}
+*/
+
 import java.util.Comparator;
 
 public class Pokemon {
