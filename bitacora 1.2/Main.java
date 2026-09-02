@@ -1,5 +1,17 @@
-import edu.princeton.cs.algs4.out
 /*
+import edu.princeton.cs.algs4.Out;
+import edu.princeton.cs.algs4.StopwatchCPU;
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("empieza experimento");
+        int[] valorn = {10, 11, 12, 13, 14, 15};
+        for (int x : valorn) {
+            int n= (int) Math.pow(2, t);
+            System.out.println("instancia n= " + n);
+            */
+
 import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.StopwatchCPU;
 import java.util.ArrayList;
@@ -85,4 +97,3 @@ public class Main {
         return unicos;
     }
 }
-*/
