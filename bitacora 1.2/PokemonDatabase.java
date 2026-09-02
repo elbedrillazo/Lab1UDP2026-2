@@ -116,6 +116,19 @@ public class PokemonDatabase {
         }
 
      string attr= atributo
+
+     if (attr.equals("name")){
+     comparador = Pokemon.BY_NAME;
+        }else if (attr.equals("hp")){
+        comparador = Pokemon.BY_HP;
+        }else if (attr.equals("attack")){
+        comparador = Pokemon.BY_ATTACK;
+        }else if (attr.equals("defense")){
+        comparador = Pokemon.BY.DEFENSE;
+        }else if (attr.equals("speed")) {
+        comparador = Pokemon.BY.SPEED;
+        }else{
+        comparador = Pokemon.BY.TOTAL_STATS;
         }
 
         if ("selectionSort".equalsIgnoreCase(algoritmo)) {
@@ -177,15 +190,21 @@ public class PokemonDatabase {
     }
 
     private int compararClaveConPokemon(String clave, Pokemon p, String atributo) {
-        if (atributo == null || atributo.trim().isEmpty()) atributo = "totalStats";
+        if (atributo == null || atributo.trim().isEmpty()) {
+        atributo = "totalStats";
         try {
-            switch (atributo.toLowerCase()) {
-                case "name": return clave.compareTo(p.getName());
-                case "hp": return Integer.compare(Integer.parseInt(clave), p.getHp());
-                case "attack": return Integer.compare(Integer.parseInt(clave), p.getAttack());
-                case "defense": return Integer.compare(Integer.parseInt(clave), p.getDefense());
-                case "speed": return Integer.compare(Integer.parseInt(clave), p.getSpeed());
-                default: return Integer.compare(Integer.parseInt(clave), p.getTotalStats());
+           if (atributo.equalsIgnoreCase("name")){
+           return clave.compareTo(p.getName());
+            }else if (atributo.equalsIgnoreCase("hp")){
+            return Integer.compare(Integer.parseInt(clave), p.getHp());
+            }else if (atributo.equalsIgnoreCase("attack")){
+            return Integer.compare(Integer.parseInt(clave), p.getAttack());
+            }else if (atributo.equalsIgnoreCase("defense")){
+            return Integer.compare(Integer.parseInt(clave), p.getDefense());
+            }else if (atributo.equalsIgnoreCase("speed")){
+            return Integer.compare(Integer.parseInt(clave), p.getSpeed());
+            }else {
+            return Integer.compare(Integer.parseInt(clave), p.getTotalStats());
             }
         } catch (NumberFormatException e) {
             return -1;
