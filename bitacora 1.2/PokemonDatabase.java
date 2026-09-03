@@ -97,5 +97,46 @@ public class PokemonDatabase {
         }
     }
 }
+/*
+import java.util.ArrayList;
 
+public class PokemonDatabase {
+    private ArrayList<Pokemon> pokemons;
+
+    public PokemonDatabase(ArrayList<Pokemon> pokemons) {
+        this.pokemons = pokemons;
+    }
+
+   private int compararPokemons(Pokemon p1, Pokemon p2, String atributo){
+       if(atributo.equals("name")){
+           return p1.getName().compareTo(p2.getName());
+        }else if (atributo.equals("hp")){
+           return p1.getHp() - p2.getHp();
+       }else if (atributo.equals("attack")){
+           return p1.getAttack() - p2.getAttack();
+   }else if (atributo.equals("defense")){
+           return p1.getDefense() - p2-getSpeed();
+       }else{
+           return p1.getTotalStats() - p2.getTotalStats();
+       }
+   }
+private void selection(string atributo){
+int n = pokemons.size();
+for (int i=0; i<n - 1; i++){
+int min_idx = i;
+for (int j=i+1; j<n; j++){
+if(compararPokemons(pokemons.get(j), pokemons.get(min_idx), atributo) < 0){
+min_idx = j;
+      }
+      }
+      Pokemon temp= pokemons.get(min_idx);
+      pokemons.set(min_edx, pokemons.get(i));
+      pokemons.set(i,temp);
+      }
+      }
+      public void ordenarPorAlgoritmo(string algoritmo, string atributo){
+      if(atributo==null || atributo.equals("")){
+      selection(atributo);
+     
+*/
 
