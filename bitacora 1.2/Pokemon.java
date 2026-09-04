@@ -2,15 +2,15 @@
 import java.util.Comparator;
 public class Pokemon{
     private int id;
-    private string nombre;
-    private string tipo;
+    private String nombre;
+    private String tipo;
     private int hp;
     private int ataque;
     private int defensa;
     private int velocidad;
     private int totalStats;
 
-    public Pokemon(int id, string nombre, string tipo, int hp, int ataque, int defensa,int velocidad, int totalStats){
+    public Pokemon(int id, String nombre, String tipo, int hp, int ataque, int defensa,int velocidad, int totalStats){
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
@@ -22,9 +22,9 @@ public class Pokemon{
     }
 public int getId(){
     return id;}
-public string getNombre(){
+public String getNombre(){
     return nombre;}
-public string getTipo(){
+public String getTipo(){
     return tipo;}
 
 public void setHp(int hp){
@@ -42,10 +42,15 @@ public int getDefensa(){
 public void setVelocidad(int velocidad){
     this.velocidad=velocidad; ActualizarTotalStats();}
 public int getVelocidad(){
-    return velocidad}
+    return velocidad;}
 private void ActualizarTotalStats(){
     this.totalStats=this.hp+this.defensa+this.velocidad+this.ataque;}
 public int getTotalStats(){
     return totalStats;}
-
-
+public static final Comparator <Pokemon> Su_Nombre = Comparator.comparing (Pokemon::getNombre);
+public static final Comparator <Pokemon> Su_Hp = Comparator.comparing (Pokemon::getHp);
+public static final Comparator <Pokemon> Su_Ataque = Comparator.comparing (Pokemon::getAtaque);
+public static final Comparator <Pokemon> Su_Defensa = Comparator.comparing (Pokemon::getDefensa);
+public static final Comparator <Pokemon> Su_Velocidad = Comparator.comparing (Pokemon::getVelocidad);
+public static final Comparator <Pokemon> Su_Total_Stats = Comparator.comparing (Pokemon::getTotalStats);
+}
