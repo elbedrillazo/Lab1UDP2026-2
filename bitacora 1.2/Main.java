@@ -15,7 +15,7 @@ public class Main {
             outExp2.println("instancia,nombre,t_ordenamiento,t_lineal,t_binaria");
             
             for (int i=0; i<100; i++){
-                long seed= n+1;
+                long seed= n+i;
                 ArrayList<Pokemon> dbOriginal=PokemonGenerator.generateDatabase(n, seed);
                 ArrayList<Pokemon> copiaSelection= new Arraylist<>(dbOriginal);
                 ArrayList<Pokemon> copiaMerge= new Arraylist<>(dbOriginal);
