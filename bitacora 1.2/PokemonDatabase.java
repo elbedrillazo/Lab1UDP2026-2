@@ -14,13 +14,19 @@ public class PokemonDatabase {
             atributo = "totalStats";
         }
 
-        switch (atributo.toLowerCase()) {
-            case "name": comparador = Pokemon.BY_NAME; break;
-            case "hp": comparador = Pokemon.BY_HP; break;
-            case "attack": comparador = Pokemon.BY_ATTACK; break;
-            case "defense": comparador = Pokemon.BY_DEFENSE; break;
-            case "speed": comparador = Pokemon.BY_SPEED; break;
-            default: comparador = Pokemon.BY_TOTAL_STATS; break;
+        String atributoSeleccionado= atributo.toLowerCase();
+        if (atributoSeleccionado.equals("name")){
+            comparador = Pokemon.BY_NAME;
+        } else if (atributoSeleccionado.equals("hp")){
+            comparador = Pokemon.BY_HP;
+        } else if (atributoSeleccionado.equals("attack")){
+            comparador = Pokemon.BY_ATTACK;
+        } else if (atributoSeleccionado.equals("defense")){
+            comparador = Pokemon.BY_DEFENSE;
+        } else if (atributoSeleccionado.equals("speed")){
+            comparador = Pokemon.BY_SPEED;
+        } else {
+            comparador = Pokemon.BY_TOTAL_STATS;
         }
 
         if ("selectionSort".equalsIgnoreCase(algoritmo)) {
@@ -83,15 +89,22 @@ public class PokemonDatabase {
 
     private int compararClaveConPokemon(String clave, Pokemon p, String atributo) {
         if (atributo == null || atributo.trim().isEmpty()) atributo = "totalStats";
+            
+        String atributoSeleccionado = atributo.toLowerCase();
         try {
-            switch (atributo.toLowerCase()) {
-                case "name": return clave.compareTo(p.getName());
-                case "hp": return Integer.compare(Integer.parseInt(clave), p.getHp());
-                case "attack": return Integer.compare(Integer.parseInt(clave), p.getAttack());
-                case "defense": return Integer.compare(Integer.parseInt(clave), p.getDefense());
-                case "speed": return Integer.compare(Integer.parseInt(clave), p.getSpeed());
-                default: return Integer.compare(Integer.parseInt(clave), p.getTotalStats());
-            }
+           if (atributoSeleccionado.equals("name")){
+               return clave.compareTo(p.getName());
+           } else if (atributoSeleccionado.equals("hp")){
+               return Integer.compare(Integer.parseInt(clave), p.getHp());
+           } else if (atributoSeleccionado.equals("attack")){
+               return Integer.compare(Integer.parseInt(clave), p.getAttack());
+           } else if (atributoSeleccionado.equals("defense")){
+               return Integer.compare(Integer.parseInt(clave), p.getDefense());
+           } else if (atributoSeleccionado.equals("speed")){
+               return Integer.compare(Integer.parseInt(clave), p.getSpeed());
+           } else {
+               return Integer.compare(Integer.parseInt(clave), p.getTotalStats());
+           }
         } catch (NumberFormatException e) {
             return -1;
         }
