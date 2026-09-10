@@ -2,8 +2,8 @@ import edu.princeton.cs.algs4.Out;
 import edu.princeton.cs.algs4.StopwatchCPU;
 import java.util.ArrayList;
 
-public class Main {
-    public static void main(String[] args) {
+public class Experimento {
+    public static void experimento(String[] args) {
         System.out.println("empieza experimento");
         int[] valorn = {10, 11, 12, 13, 14, 15};
         for (int x : valorn) {
