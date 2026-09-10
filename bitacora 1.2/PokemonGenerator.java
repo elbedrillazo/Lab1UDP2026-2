@@ -37,7 +37,7 @@ public class PokemonGenerator {
             int speed = ramdon.nextInt(177) + 5;
 
             // crea el objeto  guarda en la lista 
-            Pokemon nuevoPokemon = new Pokemon(id. name, type1, hp, attack, defense, speed);
+            Pokemon nuevoPokemon = new Pokemon(id, name, type1, hp, attack, defense, speed);
             database.add(nuevoPokemon);
         }
 
